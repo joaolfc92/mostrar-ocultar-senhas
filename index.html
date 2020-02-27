@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mostar/esconder password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="inputBox">
+        <input type="password" name="" id="password" placeholder="Digite sua senha">
+        <div id="toggle" onclick="showHide()">  </div>
+
+
+        <script>
+        
+            const password = document.getElementById('password');
+            const toggle = document.getElementById('toggle');
+
+            function showHide(){
+                if(password.type  === 'password'){
+                    password.setAttribute('type','text')
+                    toggle.classList.add('hide')
+                }else{
+                    password.setAttribute('type','password')
+                    toggle.classList.remove('hide')
+                }
+            }
+
+        
+        </script>
+    </div>
+</body>
+</html>
